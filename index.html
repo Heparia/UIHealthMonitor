@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>Reca</title>
+</head>
+<body>
+    <header></header>
+    <main>
+        <article class="d-flex" id="iot-value">
+            <section class="card-iot">
+                <div>
+                <div class="circles">
+                    <div class="circle small"></div>
+                    <div class="circle large"></div>
+                </div>
+                </div>
+                <div>
+                    <span class="material-symbols-outlined">ecg_heart</span>
+                    <h3>Detak Jantung Per Menit</h3>
+                    <h1>40</h1>
+                </div>
+            </section>
+            <section class="card-iot">
+                <div class="circles">
+                    <div class="circle small"></div>
+                    <div class="circle large"></div>
+                </div>
+                <div>
+                    <span class="material-symbols-outlined">spo2</span>
+                    <h3>Saturasi Oksigen</h3>
+                    <h1>90</h1>
+                </div>
+            </section>
+            <section class="card-iot">
+                <div class="circles">
+                    <div class="circle small"></div>
+                    <div class="circle large"></div>
+                </div>
+                <div>
+                    <span class="material-symbols-outlined">thermostat</span>
+                    <h3>Temperature (C)</h3>
+                    <h1>35</h1>
+                </div>
+            </section>
+        </article>
+        <article id="input-container">
+            <section>
+                <p class="bg-radius bg-white" id="c-judul-input">
+                    Saran untuk pasien yang memiliki detak jantung per menit: 40, saturasi oksigen: 90, dan temperatur: 35
+                </p>
+            </section>
+            <section>
+                <form id="form-gejala">
+                    <div class="d-flex">
+                        <label for="gejala-user" class="bg-radius bg-white">Masukkan gejala yang kamu alami</label>
+                        <textarea id="gejala-user" name="gejala-user" placeholder="Ketikkan gejalamu di sini..."  class="bg-radius bg-white"></textarea>
+                    </div>
+                    <button type="submit" class="bg-radius">BERIKAN SARAN</button>
+                </form>
+            </section>
+        </article>
+        <article id="ai-result">
+            <section id="ai-result-title" class="d-flex">
+                <div class="circle cc-color"></div>
+                <div class="circle cc-color"></div>
+                <div class="circle cc-color"></div>
+                <div class="title">
+                    <p>Hasil</p>
+                </div>
+            </section>
+            <section id="ai-result-text" class="bg-radius bg-white"></section>
+        </article>
+    </main>
+    <footer></footer>
+</body>
+</html>
