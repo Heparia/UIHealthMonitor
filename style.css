@@ -162,6 +162,7 @@ article {
 
 .card-iot{
     position: relative;
+    overflow: hidden;
     .circles {
         position: absolute;
         bottom: -60px;
