@@ -8,22 +8,20 @@
     --hijau: #60EFB8;
     --mint: #60EFE6;
     --cream: #F9F7F7;
+    --creamrgb: rgba(255, 255, 255, 0.378);
 }
 
 body {
     font-family: "Poppins";
-    background-color: #ffffff;
-    background-image:  radial-gradient(var(--hijau) 1px, transparent 0.9px), radial-gradient(var(--mint) 1px, #ffffff 0.9px);
-    background-size: 36px 36px;
-    background-position: 0 0,18px 18px;
+    background: linear-gradient(to bottom right, var(--cream), #DAE4FF, var(--cream), #EADAFF, #F3E3EF, var(--cream));
 }
 
 article {
-    background-color: var(--cream);
+    background-color: var(--creamrgb);
     padding: 50px;
     margin-top: 5%;
-    margin-left: 7%;
-    margin-right: 7%;
+    margin-left: 5%;
+    margin-right: 5%;
     border-radius: 50px;
 }
 
@@ -43,49 +41,6 @@ article {
     max-height: 60px;
 }
 
-#ai-result-title {
-    gap: 20px;
-}
-
-#ai-result-title div.title {
-    background-color: white;
-    width: 79.8%;
-    border-radius: 25px;
-    display: flex;
-    align-items: center;
-    p {
-        font-size: 30px;
-        margin: 0;
-        padding-left: 20px;
-    }
-}
-
-#ai-result {
-    margin-bottom: 5%;
-}
-
-/* kolom buat hasil text ml ai */
-#ai-result-text {
-    margin-top: 30px;
-    min-height: 300px;
-}
-
-.card-iot {
-    width: 300px;
-    height: 120px;
-    padding: 30px;
-    border-radius: 30px;
-}
-
-.card-iot h3 {
-    font-size: 15px;
-}
-
-.card-iot h1 {
-    margin: 0;
-    font-size: 30px;
-}
-
 .bg-radius {
     border-radius: 30px;
     padding: 15px;
@@ -95,74 +50,19 @@ article {
     background-color: white;
 }
 
-#c-judul-input{
-    text-align: center;
-    font-size: 20px;
-    margin-top: 0;
-}
-
-/* form gejala */
-
-#form-gejala{
-    div {
-        margin-bottom: 20px;
-        gap: 20px;
-        font-size: 15px;
-        label {
-            width: 150px;
-            justify-content: center;
-            max-height: 80px;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            min-width: 150px;
-        }
-        textarea {
-            width: 79%;
-            max-width: 79%;
-            min-height: 50px;
-            padding: 25px;
-            border: none;
-            overflow: hidden;
-            font-family: "Poppins";
-            font-size: 15px;
-        }
-        textarea::placeholder {
-            font-family: "Poppins";
-            font-style: italic;
-        }
-    }
-    button {
-        width: 100%;
-        border: none;
-        background: linear-gradient(to right, var(--biru), var(--ungu));
-        color: white;
-        font-weight: bold;
-        font-size: 17px;
-    }
-}
-
-/* Css individu */
+/* container iot value  */
 #iot-value {
     justify-content: space-between;
     color: white;
 }
 
-.card-iot:nth-child(1), .cc-color:nth-child(1) {
-    background: linear-gradient(to right, var(--biru), var(--ungu));
-}
-
-.card-iot:nth-child(2), .cc-color:nth-child(2) {
-    background: linear-gradient(to right, var(--orange), var(--kuning));
-}
-
-.card-iot:nth-child(3), .cc-color:nth-child(3) {
-    background: linear-gradient(to right, var(--hijau), var(--mint));
-}
-
 .card-iot{
     position: relative;
     overflow:  hidden !important;
+    width: 320px;
+    height: 130px;
+    padding: 30px;
+    border-radius: 30px;
     .circles {
         position: absolute;
         bottom: -60px;
@@ -190,3 +90,107 @@ article {
         left: 40;
     }
 }
+
+.card-iot h3 {
+    font-size: 20px;
+    margin-bottom: 3%;
+    margin-top: 3%;
+    font-weight: 400;
+}
+
+.card-iot .material-symbols-outlined {
+    font-size: 30px;
+}
+
+.card-iot h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+/* container form gejala */
+#form-gejala{
+    div {
+        margin-bottom: 20px;
+        gap: 20px;
+        font-size: 15px;
+        label {
+            width: 150px;
+            justify-content: center;
+            max-height: 80px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            min-width: 150px;
+        }
+        textarea {
+            width: 80%;
+            max-width: 80%;
+            min-height: 50px;
+            padding: 25px;
+            border: none;
+            overflow: hidden;
+            font-family: "Poppins";
+            font-size: 15px;
+        }
+        textarea::placeholder {
+            font-family: "Poppins";
+            font-style: italic;
+        }
+    }
+    button {
+        width: 100%;
+        border: none;
+        background: linear-gradient(to right, var(--biru), var(--ungu));
+        color: white;
+        font-weight: bold;
+        font-size: 17px;
+    }
+}
+
+/* container ai result */
+#ai-result-title {
+    gap: 20px;
+}
+
+#ai-result-title div.title {
+    background-color: white;
+    width: 79.8%;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    p {
+        font-size: 30px;
+        margin: 0;
+        padding-left: 20px;
+    }
+}
+
+#ai-result {
+    margin-bottom: 5%;
+}
+
+#ai-result-text {
+    margin-top: 30px;
+    min-height: 300px;
+}
+
+#c-judul-input{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 0;
+}
+
+/* Css individu */
+
+.card-iot:nth-child(1), .cc-color:nth-child(1) {
+    background: linear-gradient(to right, var(--biru), var(--ungu));
+}
+
+.card-iot:nth-child(2), .cc-color:nth-child(2) {
+    background: linear-gradient(to right, var(--orange), var(--kuning));
+}
+
+.card-iot:nth-child(3), .cc-color:nth-child(3) {
+    background: linear-gradient(to right, var(--hijau), var(--mint));
+}
+
