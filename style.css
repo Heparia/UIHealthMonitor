@@ -18,7 +18,7 @@ body {
 
 article {
     background-color: var(--creamrgb);
-    padding: 50px;
+    padding: 5%;
     margin-top: 5%;
     margin-left: 5%;
     margin-right: 5%;
@@ -34,13 +34,6 @@ article {
     border-radius: 50%;
 }
 
-.cc-color {
-    width: 60px;
-    max-width: 60px;
-    height: 60px;
-    max-height: 60px;
-}
-
 .bg-radius {
     border-radius: 30px;
     padding: 15px;
@@ -50,18 +43,24 @@ article {
     background-color: white;
 }
 
+.d-flex.no-wrap {
+    flex-wrap: nowrap;
+}
+
 /* container iot value  */
 #iot-value {
     justify-content: space-between;
     color: white;
+    gap: 5%;
 }
 
 .card-iot{
     position: relative;
     overflow:  hidden !important;
-    width: 320px;
-    height: 130px;
-    padding: 30px;
+    flex: 1;
+    align-items: stretch;
+    justify-content: space-between;
+    padding: 3%;
     border-radius: 30px;
     .circles {
         position: absolute;
@@ -114,17 +113,18 @@ article {
         gap: 20px;
         font-size: 15px;
         label {
-            width: 150px;
+            flex: 1;
             justify-content: center;
             max-height: 80px;
             text-align: center;
+            min-width: 150px;
             display: flex;
             align-items: center;
-            min-width: 150px;
+            width: -webkit-fill-available;
         }
         textarea {
-            width: 80%;
-            max-width: 80%;
+            flex: 4;
+            max-width: -webkit-fill-available;
             min-height: 50px;
             padding: 25px;
             border: none;
@@ -148,13 +148,13 @@ article {
 }
 
 /* container ai result */
-#ai-result-title {
+#ai-result-title, #triple-circle {
     gap: 20px;
 }
 
 #ai-result-title div.title {
     background-color: white;
-    width: 79.8%;
+    flex: 7;
     border-radius: 25px;
     display: flex;
     align-items: center;
@@ -180,6 +180,13 @@ article {
     margin-top: 0;
 }
 
+.cc-color {
+    width: 60px;
+    max-width: 60px;
+    height: 60px;
+    max-height: 60px;
+}
+
 /* Css individu */
 
 .card-iot:nth-child(1), .cc-color:nth-child(1) {
@@ -194,3 +201,49 @@ article {
     background: linear-gradient(to right, var(--hijau), var(--mint));
 }
 
+/* RESPONSIVE */
+/* ukuran 390 x 844 iphone*/
+
+@media only screen and (max-width: 451px) {
+    .card-iot h3{
+        font-size: 58%;
+        text-align: center;
+    }
+    
+    .card-iot h1 {
+        margin: 0;
+        font-size: 30px;
+    }
+
+    .special-respon{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #c-judul-input {
+        font-size: 80%;
+    }
+    
+    #form-gejala {
+        label {
+            font-size: 80%;
+        }
+    }
+
+    #triple-circle {
+        justify-content: center;
+    }
+
+    #ai-result-title {
+        flex-direction: column;
+        .title {
+            justify-content: center;
+        }
+    }
+    #ai-result-title div.title p {
+        padding-left: 0;
+        font-size: 20px;
+        padding: 10px;
+    }
+}
