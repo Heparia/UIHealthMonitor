@@ -8,12 +8,17 @@
     --hijau: #00EEEE;
     --mint: #00C3EE;
     --cream: #F9F7F7;
-    --creamrgb: rgba(255, 255, 255, 0.378);
+    --creamrgb: rgb(255, 255, 255);
 }
 
 body {
     font-family: "Poppins";
-    background: linear-gradient(to bottom right, var(--cream), #DAE4FF, var(--cream), #EADAFF, #F3E3EF, var(--cream));
+    background-color: var(--cream);
+    /* background: linear-gradient(to bottom right, var(--cream), #DAE4FF, var(--cream), #EADAFF, #F3E3EF, var(--cream)); */
+}
+
+.bg-white {
+    background-color: var(--cream);
 }
 
 article {
@@ -37,10 +42,6 @@ article {
 .bg-radius {
     border-radius: 30px;
     padding: 15px;
-}
-
-.bg-white {
-    background-color: white;
 }
 
 .d-flex.no-wrap {
@@ -153,7 +154,6 @@ article {
 }
 
 #ai-result-title div.title {
-    background-color: white;
     flex: 7;
     border-radius: 25px;
     display: flex;
