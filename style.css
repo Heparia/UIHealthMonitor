@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root{
-    --biru: #90AEFF;
-    --ungu: #C190FF;
-    --orange: #FCC986;
-    --kuning: #DAFC86;
-    --hijau: #60EFB8;
-    --mint: #60EFE6;
+    --biru: #C065FF;
+    --ungu: #A438EE;
+    --orange: #FECA64;
+    --kuning: #F09F33;
+    --hijau: #00EEEE;
+    --mint: #00C3EE;
     --cream: #F9F7F7;
     --creamrgb: rgba(255, 255, 255, 0.378);
 }
@@ -190,14 +190,17 @@ article {
 
 .card-iot:nth-child(1), .cc-color:nth-child(1) {
     background: linear-gradient(to right, var(--biru), var(--ungu));
+    opacity: 0.8;
 }
 
 .card-iot:nth-child(2), .cc-color:nth-child(2) {
     background: linear-gradient(to right, var(--orange), var(--kuning));
+    opacity: 0.9;
 }
 
 .card-iot:nth-child(3), .cc-color:nth-child(3) {
     background: linear-gradient(to right, var(--hijau), var(--mint));
+    opacity: 0.9;
 }
 
 /* RESPONSIVE */
@@ -208,7 +211,7 @@ article {
     .card-iot {
         justify-content: center;
     }
-    
+
     .card-iot h3{
         font-size: 58%;
         text-align: center;
@@ -249,5 +252,9 @@ article {
         padding-left: 0;
         font-size: 20px;
         padding: 10px;
+    }
+
+    article, .bg-radius, .card-iot {
+        border-radius: 15px;
     }
 }
