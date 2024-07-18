@@ -59,7 +59,6 @@ article {
     overflow:  hidden !important;
     flex: 1;
     align-items: stretch;
-    justify-content: space-between;
     padding: 3%;
     border-radius: 30px;
     .circles {
@@ -204,7 +203,12 @@ article {
 /* RESPONSIVE */
 /* ukuran 390 x 844 iphone*/
 
-@media only screen and (max-width: 451px) {
+@media only screen and (max-width: 651px) {
+
+    .card-iot {
+        justify-content: center;
+    }
+    
     .card-iot h3{
         font-size: 58%;
         text-align: center;
